@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Setoko</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Mobile First Approach */
+    :root {
+      --primary: #098a4e;
+      --secondary: #f8f9fa;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      padding-bottom: 60px; /* Untuk footer */
+    }
+    
+    /* Header */
+    header {
+      background-color: white;
+      padding: 10px 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    
+    .search-bar input {
+      width: 100%;
+      padding: 8px 15px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    /* Kategori */
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 15px;
+      background-color: white;
+      margin-bottom: 10px;
+    }
+    
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .category-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 5px;
+    }
+    
+    .category-item p {
+      font-size: 12px;
+      margin: 0;
+    }
+    
+    /* Produk */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+    
+    .product-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .product-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    
+    .product-info {
+      padding: 10px;
+    }
+    
+    .product-info p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    
+    .product-info .price {
+      color: var(--primary);
+      font-weight: 700;
+      margin-top: 5px;
+    }
+    
+    /* Footer Navigasi */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: white;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+    
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+    }
+    
+    .nav-item img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 3px;
+    }
+    
+    /* Responsive untuk tablet */
+    @media (min-width: 768px) {
+      .categories {
+        grid-template-columns: repeat(8, 1fr);
+      }
+      
+      .products {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 15px;
+      }
+      
+      .product-item img {
+        height: 180px;
+      }
+    }
+    
+    /* Responsive untuk desktop */
+    @media (min-width: 992px) {
+      .products {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Setoko</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Cari produk…">
+    </div>
+  </header>
+
+  <!-- Kategori -->
+  <div class="categories">
+    <div class="category-item">
+      <img src="Makanan-head.jpg" alt="Makanan Kering">
+      <p>Makanan</p>
+    </div>
+    <div class="category-item">
+      <img src="Flat-shoes.jpg" alt="Fashion">
+      <p>Fashion</p>
+    </div>
+    <div class="category-item">
+      <img src="Figure-Header.jpg" alt="Figure">
+      <p>Figure</p>
+    </div>
+    <div class="category-item">
+      <img src="Tas-Selempang.jpg" alt="Tas">
+      <p>Tas</p>
+    </div>
+    <div class="category-item">
+      <img src="kosmetik.png" alt="Kosmetik">
+      <p>Kosmetik</p>
+    </div>
+    <div class="category-item">
+      <img src="elektronik.png" alt="Elektronik">
+      <p>Elektronik</p>
+    </div>
+    <div class="category-item">
+      <img src="dagingayam.jpeg" alt="Daging">
+      <p>Daging</p>
+    </div>
+    <div class="category-item">
+      <img src="buahsayur.png" alt="Buah">
+      <p>Buah</p>
+    </div>
+  </div>
+
+  <!-- Produk -->
+  <div class="products">
+    <a href="daster.html" class="product-link">
+      <div class="product-item">
+        <img src="Daster.jpeg" alt="Daster Wanita">
+        <div class="product-info">
+          <p>Daster Wanita Grosir Murah Premium Bagus</p>
+          <p class="price">Rp10.000</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="sepatunike.html" class="product-link">
+      <div class="product-item">
+        <img src="sepatunike.jpg" alt="Sepatu Nike">
+        <div class="product-info">
+          <p>Sepatu Nike bebas pilih Grosiran Murah</p>
+          <p class="price">Rp40.000</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="celanajeans.html" class="product-link">
+      <div class="product-item">
+        <img src="celanajeans.jpg" alt="Celana Jeans">
+        <div class="product-info">
+          <p>Celana Jeans Pria Premium Grosiran</p>
+          <p class="price">Rp25.000</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="buahjeruk.html" class="product-link">
+      <div class="product-item">
+        <img src="buahjeruk.jpg" alt="Buah Jeruk">
+        <div class="product-info">
+          <p>Buah Jeruk Mandarin manis dari Petani 1 Kg</p>
+          <p class="price">Rp12.000</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="paketpanci.html" class="product-link">
+      <div class="product-item">
+        <img src="Paketpanci.jpg" alt="Paket Panci">
+        <div class="product-info">
+          <p>Grosir Paket Panci Set Supra 9 pcs</p>
+          <p class="price">Rp85.000</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="panci3in1.html" class="product-link">
+      <div class="product-item">
+        <img src="Panc3in1.jpg" alt="Panci 3 in 1">
+        <div class="product-info">
+          <p>Paket Panci 3 in 1 anti lengket Grosiran</p>
+          <p class="price">Rp50.000</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Footer Navigasi -->
+  <footer>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-3 nav-item">
+          <img src="Home.png" alt="Home">
+          <span>Home</span>
+        </div>
+        <div class="col-3 nav-item">
+          <img src="kategori.jpg" alt="Kategori">
+          <span>Kategori</span>
+        </div>
+        <div class="col-3 nav-item">
+          <img src="keranjang.png" alt="Keranjang">
+          <span>Keranjang</span>
+        </div>
+        <div class="col-3 nav-item">
+          <img src="Akun.png" alt="Akun">
+          <span>Akun</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
